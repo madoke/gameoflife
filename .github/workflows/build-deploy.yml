@@ -22,7 +22,7 @@ jobs:
 
     - name: Wasm build
       run: |
-        wasm-pack
+        wasm-pack build
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
