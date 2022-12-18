@@ -1,5 +1,8 @@
 import { Universe, Cell } from "gameoflife";
-import { memory } from "gameoflife/gameoflife_bg";
+import { memory } from "gameoflife/gameoflife_bg.wasm";
+
+import maincss from "./gameoflife.css";
+import picocss from "./pico.min.css";
 
 const CELL_SIZE = 10; // px
 const GRID_COLOR = "#CCCCCC";
