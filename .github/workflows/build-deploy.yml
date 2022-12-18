@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
 
     strategy:
       matrix:
@@ -41,4 +44,5 @@ jobs:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
         directory: ./www/dist
