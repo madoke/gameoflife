@@ -18,8 +18,9 @@ jobs:
     - name: Wasm Build
       uses: jetli/wasm-pack-action@v0.4.0
       with:
-        # Optional version of wasm-pack to install(eg. 'v0.9.1', 'latest')
         version: 'latest'
+      run: |
+        wasm-pack
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
