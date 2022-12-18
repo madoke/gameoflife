@@ -103,11 +103,8 @@ impl Universe {
         let width = 64;
         let height = 64;
 
-        let mut rng = rand::thread_rng();
-
         let cells = (0..width * height)
             .map(|i| {
-                let n1
                 if i % 2 == 0 || i % 7 == 0 {
                     Cell::Alive
                 } else {
