@@ -15,10 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Wasm Build
+    - name: Install wasm-pack
       uses: jetli/wasm-pack-action@v0.4.0
       with:
         version: 'latest'
+
+    - name: Wasm build
       run: |
         wasm-pack
 
